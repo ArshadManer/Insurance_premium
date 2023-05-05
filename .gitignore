@@ -1,0 +1,9 @@
+/build/
+/dist/
+/src.egg-info/
+/venv/
+/logs/
+/data/processed/
+/.idea/
+/saved_models/
+/reports
