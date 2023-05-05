@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <title>Insurance Premium Prediction</title>
+  </head>
+  <body>
+    <div class="container my-5 bg-light shadow-lg my-container">
+      <h1 class="text-center">Insurance Premium Prediction</h1>
+      <form action="{{ url_for('index')}}" method="post">
+        <div class="form-group">
+          <label for="age">Age:</label>
+          <select class="form-control" id="age" name="age">
+            <option value="0">(0-17)</option>
+            <option value="1">(18-25)</option>
+            <option value="2">(25-40)</option>
+            <option value="3">(40-60)</option>
+            <option value="4">(60+)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="gender">Gender:</label>
+          <div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="gender" id="male" value="male" checked>
+              <label class="form-check-label" for="male">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+              <label class="form-check-label" for="female">Female</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="bmi">BMI:</label>
+          <select class="form-control" id="bmi" name="bmi">
+            <option value="0">Underweight (0-18.5)</option>
+            <option value="1">Healthy (18.5-25)</option>
+            <option value="2">Overweight (25-30)</option>
+            <option value="3">Obesity (30+)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="region">Region:</label>
+          <select class="form-control" id="region" name="region">
+            <option value="northeast">North East</option>
+            <option value="northwest">North West</option>
+            <option value="southeast">South East</option>
+            <option value="southwest">South West</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="smoker">Smoker:</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="smoker" id="smoker_yes" value="yes" checked>
+            <label class="form-check-label" for="smoker_yes">
+              Yes
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="smoker" id="smoker_no" value="no">
+            <label class="form-check-label" for="smoker_no">
+              No
+            </label>
+          </div>
+          <div class="form-group">
+            <label for="children">No of Children:</label>
+            <input class="form-control" type="text" name="children" id="children" value=0 min=0 step="1">
+          </div>
+        </div>
+        {% if output %}
+        <div class="form-group">
+          <label for="output">Predicted Premium:</label>
+          <input type="text" class="form-control" id="output" disabled value={{output}} >
+        </div>
+        {% endif %}
+        <button type="submit" class="btn btn-primary">Predict</button>
+      </form>
+    </div>
+  <link rel="stylesheet" href={{url_for('static', filename='style.css' )}} />
+  </body>
+</html>
+
