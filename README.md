@@ -17,7 +17,6 @@ The following packages are required to run the code:
 
 To set up the environment, you need to install the required packages. You can use the following command to install them using `pip`: pip install numpy pandas scikit-learn matplotlib
 
-
 ## Usage
 
 The code is written in Python and can be executed using a Jupyter Notebook or any other Python environment.
