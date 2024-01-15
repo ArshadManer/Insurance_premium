@@ -32,7 +32,7 @@ The dataset used for training and testing the model is included in the `data` fo
 
 ## Model
 
-The model used in this project is a simple linear regression model. However, you can experiment with other regression algorithms or try to improve the performance of the model by fine-tuning the hyperparameters or using a more complex model.
+The model used in this project is a linear regression model. However, you can experiment with other regression algorithms or try to improve the performance of the model by fine-tuning the hyperparameters or using a more complex model.
 
 ## Results
 
@@ -42,6 +42,3 @@ The performance of the model is evaluated using mean squared error (MSE) and R-s
 
 This project provides a basic implementation of an insurance premium prediction model. The code and methodology can be used as a starting point for building more advanced models or for exploring different regression algorithms.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
